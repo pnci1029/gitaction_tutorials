@@ -1,0 +1,27 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Hello Wordl
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run pwd
+        run: pwd
+        # pwd는 우분투에서 현재 실행중인 위치로,,,,,,,,,,,, 실제 행위는 run : 부분
+
+      - name: Run ls -al
+        run: ls -al
